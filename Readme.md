@@ -1,0 +1,1 @@
+# lite-server用テンプレート
