@@ -4,9 +4,8 @@ var canvas = document.getElementById('canvassample'),
     Xpoint,
     Ypoint;
 
-
 //初期値（サイズ、色、アルファ値）の決定
-var defSize = 3,
+var defSize = 8,
     defColor = "#555";
 
 // PC対応
@@ -70,7 +69,6 @@ function to_1d_array(width,height){
     for (var i = 0; i < height; i++) {
         for (var j = 0; j < width; j++) {
             var idx = (j + i * width) * 4;
-            //console.log(idx);
             var r = src[idx]; //赤
             var g = src[idx+1]; //緑
             var b = src[idx+2]; //青
@@ -84,7 +82,7 @@ function to_1d_array(width,height){
     return gray_arr
 }
 
-var model
+var model;
 window.onload = function(){
     model = tf.loadModel('http://localhost:1234/model.json');
 }
@@ -95,19 +93,18 @@ function learn(){
 
     inp=tf.tensor(arr);
     inp = inp.reshape([1,784]);
-
-
     
     model.then((m) => {
 	predict = m.predict(inp);
-	//console.log(predict.print());
-	html_arr = predict.dataSync();
-	
+	html_arr = predict.dataSync();	
 	for(var i=0,l=html_arr.length;i<l;i++){
 	    document.getElementById("predict"+i.toString()).innerHTML = html_arr[i].toFixed(4);
 	}
 	clearCanvas();
+    }).catch(function (error) {
+	console.log(error);
     });
+    
 }
 
 
