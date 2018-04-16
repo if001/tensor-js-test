@@ -96,8 +96,10 @@ function learn(){
     inp=tf.tensor(arr);
     inp = inp.reshape([1,784]);
 
-    model.then((model) => {
-	predict = model.predict(inp);
+
+    
+    model.then((m) => {
+	predict = m.predict(inp);
 	//console.log(predict.print());
 	html_arr = predict.dataSync();
 	
