@@ -37,8 +37,10 @@ loadModelがpromise型を返すので、以下のようにしてpredictを行う
 
 ```
 model.then((m) => {
-predict = m.predict(input);
-}
+	predict = m.predict(input);
+}.catch(function (error) {
+	console.log(error);
+});
 ```
 
 

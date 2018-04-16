@@ -8,12 +8,11 @@
     </head>
     <body>
 
-      <h1>tensor js test</h1>
       <div style="float: left; width:30%; magin:20px">
-	<h2>文字</h2>
+	<h2>入力</h2>
 	<canvas id="canvassample" width="300" height="300"></canvas>
 	<div id="bu">
-	  <button type="button" onclick="learn()">go!</button>
+	  <button type="button" onclick="learn()">predict</button>
 	  <button type="button" onclick="clearCanvas()">reset</button>
 	</div>
       </div>
@@ -23,48 +22,48 @@
 	<canvas id="tmpcanvas" width="28" height="28"></canvas>
 	<table border=1>
 	  <tr>
-	    <th>文字</th>	    
+	    <th width="30px"></th>	    
 	    <th width="150px">確率</th>
 	  </tr>
 	  　<tr>
 	    　　<th>0</th>
-	    　　<th><div id="predict0"></div></th>
+	    　　<th><div id="predict0">-</div></th>
 	    　</tr>
 	  　<tr>
 	    　　<th>1</th>
-	    　　<th><div id="predict1"></div></th>
+	    　　<th><div id="predict1">-</div></th>
 	    　</tr>
 	  　<tr>
 	    　　<th>2</th>
-	    　　<th><div id="predict2"></div></th>
+	    　　<th><div id="predict2">-</div></th>
 	    　</tr>
 	  　<tr>
 	    　　<th>3</th>
-	    　　<th><div id="predict3"></div></th>
+	    　　<th><div id="predict3">-</div></th>
 	    　</tr>
 	  　<tr>
 	    　　<th>4</th>
-	    　　<th><div id="predict4"></div></th>
+	    　　<th><div id="predict4">-</div></th>
 	    　</tr>
 	  　<tr>
 	    　　<th>5</th>
-	    　　<th><div id="predict5"></div></th>
+	    　　<th><div id="predict5">-</div></th>
 	    　</tr>
 	  　<tr>
 	    　　<th>6</th>
-	    　　<th><div id="predict6"></div></th>
+	    　　<th><div id="predict6">-</div></th>
 	    　</tr>
 	  　<tr>
 	    　　<th>7</th>
-	    　　<th><div id="predict7"></div></th>
+	    　　<th><div id="predict7">-</div></th>
 	    　</tr>
 	  　<tr>
 	    　　<th>8</th>
-	    　　<th><div id="predict8"></div></th>
+	    　　<th><div id="predict8">-</div></th>
 	    　</tr>
 	  　<tr>
 	    　　<th>9</th>
-	    　　<th><div id="predict9"></div></th>
+	    　　<th><div id="predict9">-</div></th>
 	    　</tr>
 	</table>
 	
