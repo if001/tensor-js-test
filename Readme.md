@@ -11,6 +11,7 @@ tfjs.converters.save_keras_model(model, "./")
 
 - model.json
 - group〜
+
 のファイルが生成されるので、severから読み込めるようにしておく
 
 
